@@ -1,12 +1,17 @@
-import { createBrowserRouter } from "react-router";
+import { Routes, Route } from 'react-router-dom';
+import { LoginPage } from './features/auth/pages/LoginPage';
 
-export const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Hello World</div>,
-  },
-  {
-    path: "/auth",
-    element: 'Renderizar aqui tus rutas de auth'
-  }
-]);
+// Configuración de las rutas de la aplicación
+export const AppRouter = () => {
+  return (
+    <Routes>
+      {/* Ruta para el login */}
+      <Route path="/login" element={<LoginPage />} />
+      
+      {/* Ruta por defecto o de inicio */}
+      <Route path="/" element={<LoginPage />} />
+    </Routes>
+  );
+};
+
+
