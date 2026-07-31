@@ -1,12 +1,10 @@
-import { BrowserRouter } from 'react-router-dom';
-import { AppRouter } from './appRouter';
+import { RouterProvider } from 'react-router-dom';
+import { appRouter } from './appRouter';
 
 // Componente principal envuelto en el enrutador
 export const App = () => {
   return (
-    <BrowserRouter>
-      <AppRouter />
-    </BrowserRouter>
+      <RouterProvider router={appRouter} />
   );
 };
 

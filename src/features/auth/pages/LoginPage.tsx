@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { loginUser } from '../services/authService';
 
 export const LoginPage = () => {
@@ -14,7 +14,7 @@ export const LoginPage = () => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // Manejador del envío del formulario
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent) => {
     e.preventDefault();
     setErrorMessage(null);
     setIsLoading(true);
@@ -124,9 +124,9 @@ export const LoginPage = () => {
 
         <p className="text-center text-sm text-gray-400 mt-6">
           ¿No tienes una cuenta?{' '}
-          <a href="/register" className="text-red-400 hover:underline">
+          <Link to="register" className="text-red-400 hover:underline">
             Regístrate aquí
-          </a>
+          </Link>
         </p>
 
       </div>
