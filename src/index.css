@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ink-950: #0e113a;  /* HeroBanner / fondos */
+  --color-ink-900: #12173f;  /* fondo de la zona de filtros + películas */
+  --color-ink-850: #13173f;  /* fondo del NavBar */
+  --color-ink-800: #1d244b;  /* fondo de tarjetas y sidebar de filtros */
+  --color-ink-700: #353a5c;  /* controles de filtros  */
+  --color-ink-600: #30365b;  /* bordes de componentes */
+  --color-mist-300: #8798bd; /* texto secundario (HORARIOS, detalles.. etc) */
+  --color-mist-500: #a7b3d6; /* texto gris normal (links del nav) */
+  --color-gold-400: #e8c96a; /* estrellas de calificación */
+}
